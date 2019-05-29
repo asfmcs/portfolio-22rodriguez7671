@@ -1,0 +1,99 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size:20px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.history{position: absolute}
+.history{top:300px}
+.history{left: 20px}
+
+.slideshow{position: absolute}
+.slideshow{top:300px}
+.slideshow{right: 20px}
+
+.travel{position: absolute}
+.travel{top:990px}
+.travel{left: 295px}
+
+.recipe{position: absolute}
+.recipe{top:1430px}
+.recipe{left: 20px}
+
+.event{position: absolute}
+.event{top:990px}
+.event{right: 295px}
+
+.blog{position: absolute}
+.blog{top:1430px}
+.blog{right: 20px}
+
+.maze{position: absolute}
+.maze{top: }
+.maze{right:20px }
+
+.mario{position: absolute}
+.mario{top: }
+.mario{left:475px }
+
+.medal{position: absolute}
+.medal{top: }
+.medal{left: 20px}
+
+.balls{position: absolute}
+.balls{top: }
+.balls{right:150px }
+
+.cylinder{position: absolute}
+.cylinder{top: }
+.cylinder{left: 150px }

@@ -1,0 +1,275 @@
+
+<html>
+<head>
+<title>Maze</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/a818e45667427600634e9e44b17902f1a5d48243/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Maze</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    var centerXP = getWidth() - 300;
+var centerYP = getHeight() / 2;
+
+function start(){
+
+ var centerX = getWidth()/2;
+    var centerY = getHeight()/2;
+    drawPacman(200, 200);
+    drawGhost(centerX, centerY, Color.red);
+    drawGhost(125, 60, Color.green);
+    drawGhost(270, centerY, Color.cyan);
+    drawGhost(300, 60, Color.orange);
+    drawGhost(210, 60, Color.yellow);
+    
+    var txt = new Text("Ready? Start!", "20pt Calibri");
+    txt.setPosition(210, 400);
+    txt.setColor(Color.yellow);
+    add(txt);
+    
+     var atxt = new Text("Highscore 10000", "10pt Calibri");
+    atxt.setPosition(10, 40);
+    atxt.setColor(Color.yellow);
+    add(atxt);
+   
+
+}
+
+function drawGhost(centerX, centerY, color){
+    var w = 50;
+    var l = 40;
+    
+    var acircle = new Circle(w/2);
+    acircle.setColor(color);
+    acircle.setPosition(centerX + 35, centerY);
+    add (acircle);
+    
+    var rect = new Rectangle(w, l);
+    rect.setPosition(centerX + 10, centerY);
+    rect.setColor(color);
+    add(rect);
+    
+    var bcircle = new Circle(w/6);
+    bcircle.setPosition(centerX + 25,centerY);
+    bcircle.setColor(Color.white);
+    add(bcircle);
+    
+     var circle = new Circle(w/6);
+    circle.setPosition(centerX + 47,centerY);
+    circle.setColor(Color.white);
+    add(circle);
+    
+    var circle = new Circle(w/12);
+    circle.setPosition(centerX + 29,centerY);
+    circle.setColor(Color.blue);
+    add(circle);
+    
+    var circle = new Circle(w/12);
+    circle.setPosition(centerX + 51,centerY);
+    circle.setColor(Color.blue);
+    add(circle);
+    
+    var circle = new Circle(w/5.5);
+    circle.setPosition(centerX + 19,centerY + 43);
+    circle.setColor(color);
+    add(circle);
+    
+    var circle = new Circle(w/5.5);
+    circle.setPosition(centerX + 35 ,centerY + 43);
+    circle.setColor(color);
+    add(circle);
+    
+    var circle = new Circle(w/5.5);
+    circle.setPosition(centerX + 51,centerY + 43);
+    circle.setColor(color);
+    add(circle);
+    
+}
+
+
+function drawPacman(centerX, centerY){
+   
+    var background = new Rectangle(500,500);
+    background.setColor(Color.black);
+    background.setPosition(0,0);
+    add (background);
+    
+    var myArc = new Arc(50, -150, -190, 0);
+    myArc.setPosition(150, 400);
+    myArc.setColor(Color.yellow);
+    add (myArc);
+
+    var circle = new Circle(5);
+    circle.setPosition(10, 400);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    
+    var circle = new Circle(5);
+    circle.setPosition(40, 400);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(8);
+    circle.setPosition(centerXP, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP + 30, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP + 60, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP - 30, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP - 60, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP - 90, centerYP);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var circle = new Circle(5);
+    circle.setPosition(centerXP - 90, centerYP + 30);
+    circle.setColor(Color.yellow);
+    add (circle);
+    
+    var lcircle = new Circle(5);
+    lcircle.setPosition(centerXP - 90, centerYP + 60);
+    lcircle.setColor(Color.yellow);
+    add (lcircle);
+    
+    var mcircle = new Circle(5);
+    mcircle.setPosition(centerXP - 90, centerYP + 90);
+    mcircle.setColor(Color.yellow);
+    add (mcircle);
+    
+    var ncircle = new Circle(5);
+    ncircle.setPosition(centerXP - 90, centerYP + 120);
+    ncircle.setColor(Color.yellow);
+    add (ncircle);
+    
+    var icircle = new Circle(5);
+    icircle.setPosition(centerXP + 250 , centerYP - 60);
+    icircle.setColor(Color.yellow);
+    add (icircle);
+    
+    var hcircle = new Circle(5);
+    hcircle.setPosition(centerXP + 250 , centerYP - 30);
+    hcircle.setColor(Color.yellow);
+    add (hcircle);
+    
+    var gcircle = new Circle(5);
+    gcircle.setPosition(centerXP + 250 , centerYP - 90);
+    gcircle.setColor(Color.yellow);
+    add (gcircle);
+    
+     var fcircle = new Circle(5);
+    fcircle.setPosition(centerXP + 250 , centerYP - 0);
+    fcircle.setColor(Color.yellow);
+    add (fcircle);
+    
+    var ecircle = new Circle(5);
+    ecircle.setPosition(80, 400);
+    ecircle.setColor(Color.yellow);
+    add (ecircle);
+    
+     var dcircle = new Circle(5);
+    dcircle.setPosition(centerXP +  200 , centerYP - 250);
+    dcircle.setColor(Color.yellow);
+    add (dcircle);
+    
+    
+    var ccircle = new Circle(7);
+    ccircle.setPosition(140, 380);
+    ccircle.setColor(Color.black);
+    add (ccircle);
+   
+  
+    
+    var line = new Line(100, 10, 400, 10);
+    line.setColor(Color.blue);
+    line.setLineWidth(5);
+    add(line);
+    
+    var sline = new Line(0, 150, 280, 150);
+    sline.setColor(Color.blue);
+    sline.setLineWidth(5);
+    add(sline);
+    
+    var rline = new Line(100, 10, 100, 20);
+    rline.setColor(Color.blue);
+    rline.setLineWidth(5);
+    add(rline);
+    
+    var fline = new Line(280, 150, 280, 170);
+    fline.setColor(Color.blue);
+    fline.setLineWidth(5);
+    add(fline);
+    
+    
+    var eline = new Line(100, 320, 400, 320);
+    eline.setColor(Color.blue);
+    eline.setLineWidth(5);
+    add(eline);
+    
+    var iline = new Line(100, 320, 100, 340);
+    iline.setColor(Color.blue);
+    iline.setLineWidth(5);
+    add(iline);
+    
+    
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

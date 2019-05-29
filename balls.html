@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drop the Ball</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.4.0/dist/aframe-physics-system.min.js"></script>
+    
+  </head>
+  <body>
+    <a-scene physics="gravity:-4.5">
+    
+        <a-sky color="lightblue"></a-sky>
+
+      <!-- Camera -->
+      <a-entity camera look-controls
+      wasd-controls
+      position="0 1.6 0"
+      constraint="collideConnected:true"
+      static-body
+      ></a-entity>
+    
+      <!-- Floor -->
+      <a-plane static-body
+        color="tan"
+        position="0 0 0"
+        width="30"
+        height="30"
+        rotation="-90 0 0"
+      ></a-plane>
+    
+      <!-- Immovable box -->
+      <a-box static-body position="0 0.5 -8" 
+      width="3" height=".01" depth="2"
+      color="black" rotation="0 0 20"
+      ></a-box>
+    
+     <a-box static-body position="-2 3 -7" 
+      width="3" height=".01" depth="2"
+      color="black" rotation="0 0 -50"
+      ></a-box>    
+    
+      <!-- Dynamic box -->
+      
+    <a-sphere dynamic-body
+      color="red" radius="0.5" position="-1 7 -8"></a-sphere>
+      
+    <a-sphere dynamic-body
+      color="orange" radius="0.5" position="-0.5 5 -8"></a-sphere>
+      
+    <a-sphere dynamic-body
+      color="purple" radius="0.5" position="-2 9 -8"></a-sphere>
+      
+    <a-sphere dynamic-body
+      color="blue" radius="0.5" position="-1.5 11 -8"></a-sphere>
+      
+    <a-sphere dynamic-body
+      color="green" radius="0.5" position="0.5 8 -8"></a-sphere>
+      
+    <a-sphere dynamic-body
+      color="white" radius="0.5" position="1 6 -8"></a-sphere>
+    
+        
+    </a-scene>
+
+  </body>
+</html>

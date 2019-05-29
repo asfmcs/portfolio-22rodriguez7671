@@ -1,0 +1,57 @@
+table {
+  border: 10px solid black;
+  font-size: 20px;
+  font-family: monoscope;
+  }
+  body {
+    background-color: lightcoral;
+  }
+  h1{
+    background-color: white;
+    font-size: 45px;
+    font-family:'Press Start 2P', cursive;
+    width: 100%;
+  }
+h2 {
+  background-color: gray;
+  font-size: 40px;
+  font-family:'Bangers', cursive; 
+  width: 50%;
+  
+}
+h3 {
+  background-color: black;
+  color: white;
+  font-size: 35px;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  width: 75%;
+  font-variant: small-caps;
+}
+#everything {
+  margin: auto;
+  border: 15px solid lightgray;
+  padding: 20px;
+
+}
+
+#picture1 {
+  border: 7px dashed gray;
+  width: 47%;
+  padding: 10px;
+  margin: auto;
+}
+
+#picture2 {
+  border: 7px dashed gray;
+  width: 52%;
+  padding: 10px;
+  margin: auto; 
+}
+.text {
+  font-size: 20px;
+  line-height: 23px;
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgb(2, 172, 172);
+  width: 80% ;
+  text-align: justify;
+}

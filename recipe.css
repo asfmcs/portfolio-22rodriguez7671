@@ -1,0 +1,53 @@
+table {
+  border: 10px solid black;
+  font-size: 20px;
+  font-family: 'Baloo', cursive;
+}
+body {
+  background-color: lightblue;
+}
+h1 {
+  background-color: white;
+  font-size:50px;
+  font-family: 'Alfa Slab One', cursive;
+}
+#everything{
+  margin: auto;
+  border: 20px solid gray;
+  padding: 20px;
+}
+#steps {
+  background-color: lightcoral;
+  font-size: 30px;
+  width: 50%;
+  font-family: 'Righteous', cursive;
+}
+#materials{
+  background-color: lightcoral;
+  font-size: 30px;
+  width: 50%;
+  font-family: 'Righteous', cursive;
+}
+#recipe1{
+  background-color: lightgray;
+  font-size: 40px;
+  width: 70%;
+  font-family: 'Monoton', cursive;
+}
+#recipe2{
+  background-color: lightgray;
+  font-size: 40px;
+  width: 70%;
+  font-family: 'Monoton', cursive;
+}
+#recipe3{
+  background-color: lightgray;
+  font-size: 40px;
+  width: 70%;
+  font-family: 'Monoton', cursive;
+}
+#text {
+  font-size: 20px;
+  font-family: 'Baloo', cursive;
+
+}<!--Styling page did not works-->

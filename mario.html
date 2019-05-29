@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<title>Mario</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/a818e45667427600634e9e44b17902f1a5d48243/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Mario</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    function start(){
+    while(true)
+    {
+             var height = readInt("Height: ");
+        if(height <14 && height >=1)
+        {
+            break;
+        }
+        
+    }
+     
+    for (var row= 1; row <= height; row++)
+    { 
+        for (var spaces= height-row; spaces>0; spaces--)  
+        {
+            print(" ");
+        }
+        for (var hashes= height-row; hashes<height; hashes++)  
+         {
+           print("#");
+         }
+          println("#");
+    }
+     
+    
+}
+// the spaces is the difference between height and the rows. The number of spaces start decreasing.
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
